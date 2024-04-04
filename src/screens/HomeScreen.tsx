@@ -64,8 +64,7 @@ const getPopularMoviesList = async () => {
 };
 
 const HomeScreen = ({navigation}: any) => {
-  const [nowPlayingMoviesList, setNowPlayingMoviesList] =
-    useState<any>(undefined);
+  const [nowPlayingMoviesList, setNowPlayingMoviesList] = useState<any>(undefined);
   const [popularMoviesList, setPopularMoviesList] = useState<any>(undefined);
   const [upcomingMoviesList, setUpcomingMoviesList] = useState<any>(undefined);
 
@@ -124,7 +123,7 @@ const HomeScreen = ({navigation}: any) => {
         <InputHeader searchFunction={searchMoviesFunction} />
       </View>
 
-      <CategoryHeader title={'Now Playing'} />
+      <CategoryHeader title={'Em Cartaz'} />
       <FlatList
         data={nowPlayingMoviesList}
         keyExtractor={(item: any) => item.id}
@@ -161,7 +160,7 @@ const HomeScreen = ({navigation}: any) => {
           );
         }}
       />
-      <CategoryHeader title={'Popular'} />
+      <CategoryHeader title={'Em Alta'} />
       <FlatList
         data={popularMoviesList}
         keyExtractor={(item: any) => item.id}
@@ -183,7 +182,7 @@ const HomeScreen = ({navigation}: any) => {
           />
         )}
       />
-      <CategoryHeader title={'Upcoming'} />
+      <CategoryHeader title={'Em breve'} />
       <FlatList
         data={upcomingMoviesList}
         keyExtractor={(item: any) => item.id}
@@ -227,6 +226,7 @@ const styles = StyleSheet.create({
     marginTop: SPACING.space_28,
   },
   containerGap36: {
+    marginLeft: SPACING.space_12,
     gap: SPACING.space_36,
   },
 });
