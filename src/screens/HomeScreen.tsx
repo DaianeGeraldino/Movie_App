@@ -226,7 +226,6 @@ const styles = StyleSheet.create({
     marginTop: SPACING.space_28,
   },
   containerGap36: {
-    marginLeft: SPACING.space_12,
     gap: SPACING.space_36,
   },
 });
